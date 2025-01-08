@@ -53,13 +53,13 @@ poetry run python -m modbus_meter_emulator <path-to-config-yaml>
 
 ## Supported Inverters
 
-| Brand | Model     | Tested             | Notes |
-|-------|-----------|--------------------|-------|
-| Solax | X3 MIC G2 | :white_check_mark: |       |
+| Brand | Model     | Tested             | Notes                                                                      |
+|-------|-----------|--------------------|----------------------------------------------------------------------------|
+| Solax | X3 MIC G2 | :white_check_mark: | Current import/export is working, still need to validate the other values. |
 
 ## Credits
 
-Used the following repo's for inspiration
+Used the following repo's for inspiration:
 
 - [syssi/esphome-solax-x1-mini](https://github.com/syssi/esphome-solax-x1-mini/).
 - [wills106/homeassistant-solax-modbus](https://github.com/wills106/homeassistant-solax-modbus)
