@@ -50,6 +50,17 @@ Run the project with:
 ```bash
 poetry run meter <path-to-config-yaml>
 ```
+Possitional arguments:
+- `config`: Path to the configuration file.
+
+Options:
+- `-v` or `--verbose`: Enable verbose logging.
+- `-h` or `--help`: Show help message.
+
+> [!NOTE]
+> If you get a weird error like `'format'` when running the command above, this is most likely because of the version of Poetry you are using.
+> This project was developed with Poetry 1.8 and does not yet work with Poetry 2.0.
+> Try running the tool with `poetry run python -m modbus_meter_emulator <path-to-config-yaml>`.
 
 ## Supported Inverters
 
