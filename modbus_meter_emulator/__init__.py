@@ -4,4 +4,4 @@ from modbus_meter_emulator.mqtt_client import MqttClient
 from modbus_meter_emulator.modbus_server import ModbusServer
 
 
-__all__ = ["Config", "MqttClient", "ModbusServer"]
+__all__ = ["Config", "create_meter_from_config", "MqttClient", "ModbusServer"]
