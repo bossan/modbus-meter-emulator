@@ -5,6 +5,7 @@ The project is intended to be used with Home Assistant, but can be used with any
 
 > [!CAUTION]
 > This project is in the early phases of development. Please use with caution.
+> I am not responsible for any damage caused by using this project.
 
 ## Installation
 
