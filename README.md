@@ -1,7 +1,7 @@
 # Modbus Meter Emulator
 
-Emulates an energy meter with modbus communication. The project is intended to be used with Home Assistant, but can be
-used with any other system that supports MQTT and Modbus.
+Emulates an energy meter with modbus communication to enable export control on your inverter.
+The project is intended to be used with Home Assistant, but can be used with any other system that supports MQTT and Modbus.
 
 > [!CAUTION]
 > This project is in the early phases of development. Please use with caution.

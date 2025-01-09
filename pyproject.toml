@@ -1,14 +1,15 @@
 [tool.poetry]
 name = "modbus-meter-emulator"
 version = "0.1.0"
-description = ""
+description = "Emulates an energy meter with modbus communication"
+repository = "https://github.com/bossan/modbus-meter-emulator"
 
 authors = ["Sander Bos <mail@sanderbos.net>"]
 readme = "README.md"
 packages = [{ include = "modbus_meter_emulator" }]
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = ">=3.9,<4.0"
 paho-mqtt = "^2.1.0"
 pyyaml = "^6.0.2"
 pydantic = "^2.10.4"
