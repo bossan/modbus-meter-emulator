@@ -48,7 +48,7 @@ meter:
 Run the project with:
 
 ```bash
-poetry run python -m modbus_meter_emulator <path-to-config-yaml>
+poetry run meter <path-to-config-yaml>
 ```
 
 ## Supported Inverters

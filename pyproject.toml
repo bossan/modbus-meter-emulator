@@ -14,6 +14,9 @@ pyyaml = "^6.0.2"
 pydantic = "^2.10.4"
 pymodbus = {extras = ["serial"], version = "^3.8.3"}
 
+[tool.poetry.scripts]
+meter = "modbus_meter_emulator.__main__:main"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
