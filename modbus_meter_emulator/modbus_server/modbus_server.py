@@ -1,4 +1,5 @@
 import logging
+import requests
 from pymodbus.server import StartSerialServer
 
 from modbus_meter_emulator.meters import BaseMeter
