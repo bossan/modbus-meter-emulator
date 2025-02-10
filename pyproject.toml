@@ -13,7 +13,7 @@ python = ">=3.9,<4.0"
 paho-mqtt = "^2.1.0"
 pyyaml = "^6.0.2"
 pydantic = "^2.10.6"
-pymodbus = {extras = ["serial"], version = "^3.8.3"}
+pymodbus = {extras = ["serial"], version = "^3.8.5"}
 
 [tool.poetry.scripts]
 meter = "modbus_meter_emulator.__main__:main"

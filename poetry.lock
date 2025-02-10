@@ -208,13 +208,13 @@ files = [
 
 [[package]]
 name = "pymodbus"
-version = "3.8.3"
+version = "3.8.5"
 description = "A fully featured modbus protocol stack in python"
 optional = false
 python-versions = ">=3.9.0"
 files = [
-    {file = "pymodbus-3.8.3-py3-none-any.whl", hash = "sha256:68df4a8d32e14a9eca2277141e0e129c019b0c5ad3540c2fd69ae7df2b13a2fb"},
-    {file = "pymodbus-3.8.3.tar.gz", hash = "sha256:d886186bf7c3cc140f17e830919c23e4cc88334fbb91d6e5e1d7dd05860fe2c8"},
+    {file = "pymodbus-3.8.5-py3-none-any.whl", hash = "sha256:6dfab9c5910756bf400b5ea5a751c8a8627b829fd0fff1ba898020f3233f3194"},
+    {file = "pymodbus-3.8.5.tar.gz", hash = "sha256:aa00306844c2bb962c0f583f60510be9923ce20df8debb1a4565a0a48ee00f6e"},
 ]
 
 [package.dependencies]
@@ -318,4 +318,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.9,<4.0"
-content-hash = "27fcb3b83cc0d4800c35e32b8d578c0f165387a10fe0dd035246b18731ae60cc"
+content-hash = "a345b6095e1172749c83b9ffcab5a7c70fe43b690999d799c8bbff00037e46f2"
