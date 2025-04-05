@@ -19,7 +19,7 @@ pymodbus = {extras = ["serial"], version = "^3.8.6"}
 meter = "modbus_meter_emulator.__main__:main"
 
 [tool.poetry.group.dev.dependencies]
-flake8 = "^7.1.2"
+flake8 = "^7.2.0"
 
 [build-system]
 requires = ["poetry-core"]
