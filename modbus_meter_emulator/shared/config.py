@@ -1,3 +1,5 @@
+from enum import Enum
+
 import yaml
 from typing import Optional
 from pydantic import BaseModel
@@ -16,8 +18,15 @@ class MqttConfigType(BaseModel):
     broker: MqttBrokerConfigType
 
 
+class ModbusConnectionType(str, Enum):
+    TCP = 'tcp'
+    SERIAL = 'serial'
+
+
 class ModbusConfigType(BaseModel):
-    port: str
+    connectionType: ModbusConnectionType = ModbusConnectionType.SERIAL
+    address: Optional[str] = 'localhost'
+    port: str  # /dev/tty... for serial or tcp port for tcp
     framer: Optional[FramerType] = FramerType.RTU
     stopbits: Optional[int] = 1
     bytesize: Optional[int] = 8
