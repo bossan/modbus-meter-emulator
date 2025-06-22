@@ -63,6 +63,21 @@ Options:
 > This project was developed with Poetry 1.8 and does not yet work with Poetry 2.0.
 > Try running the tool with `poetry run python -m modbus_meter_emulator <path-to-config-yaml>`.
 
+### Docker
+This project is also available as a docker image.
+
+#### Pull
+```bash
+docker pull ghcr.io/bossan/modbus-meter-emulator:main
+```
+
+#### Run
+```commandline
+docker run -v ./config.yaml:/etc/modbus-meter/config.yaml ghcr.io/bossan/modbus-meter-emulator:main
+```
+
+Where `./config.yaml` should be replaced with the location of your config file.
+
 ## Supported Inverters
 
 | Brand | Model     | Tested             | Notes                                                                      |
