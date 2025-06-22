@@ -3,3 +3,5 @@ __pycache__/
 *$py.class
 **.pyc
 **/.DS_Store
+.venv
+.git
