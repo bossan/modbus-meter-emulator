@@ -1,0 +1,19 @@
+mqtt:
+  broker:
+    host: 127.0.0.1
+    port: 1883
+    username: mqtt
+    password: pass
+    keepalive: 60
+
+modbus:
+  connectionType: "tcp"
+  address: "127.0.0.1"
+  port: '8234'
+
+meter:
+ type: solax
+ config:
+   current_power_state_topic: "homeassistant/sensor/p1_meter_power/state"
+   energy_import_state_topic: "homeassistant/sensor/p1_meter_energy_import/state"
+   energy_export_state_topic: "homeassistant/sensor/p1_meter_energy_export/state"
