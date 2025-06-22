@@ -68,12 +68,12 @@ This project is also available as a docker image.
 
 #### Pull
 ```bash
-docker pull ghcr.io/bossan/modbus-meter-emulator:main
+docker pull ghcr.io/bossan/modbus-meter-emulator
 ```
 
 #### Run
 ```commandline
-docker run -v ./config.yaml:/etc/modbus-meter/config.yaml ghcr.io/bossan/modbus-meter-emulator:main
+docker run -v ./config.yaml:/etc/modbus-meter/config.yaml ghcr.io/bossan/modbus-meter-emulator
 ```
 
 Where `./config.yaml` should be replaced with the location of your config file.
