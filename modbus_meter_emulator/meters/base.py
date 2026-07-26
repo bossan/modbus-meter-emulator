@@ -16,12 +16,15 @@ class BaseMeter(abc.ABC):
 
     def __init__(self, config: dict):
         self._set_config(config)
-        self._context = ModbusServerContext(slaves=ModbusSlaveContext(
-            di=ModbusSequentialDataBlock.create(),
-            co=ModbusSequentialDataBlock.create(),
-            hr=ModbusSequentialDataBlock.create(),
-            ir=ModbusSequentialDataBlock.create()
-        ), single=True)
+        self._context = ModbusServerContext(
+            slaves=ModbusSlaveContext(
+                di=ModbusSequentialDataBlock.create(),
+                co=ModbusSequentialDataBlock.create(),
+                hr=ModbusSequentialDataBlock.create(),
+                ir=ModbusSequentialDataBlock.create(),
+            ),
+            single=True,
+        )
         self.set_initial_data()
 
     def _set_config(self, config: dict):
