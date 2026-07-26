@@ -6,34 +6,23 @@ from modbus_meter_emulator import Config, ModbusServer, MqttClient
 from modbus_meter_emulator.meters import create_meter_from_config
 
 
-logger = logging.getLogger('modbus_meter_emulator')
+logger = logging.getLogger("modbus_meter_emulator")
 
 
 parser = argparse.ArgumentParser(
-    prog='Modbus Meter Emulator',
-    description='Emulates an energy meter with modbus communication.',
-    epilog='Created by: Sander Bos https://github.com/bossan'
+    prog="Modbus Meter Emulator",
+    description="Emulates an energy meter with modbus communication.",
+    epilog="Created by: Sander Bos https://github.com/bossan",
 )
 
-parser.add_argument(
-    'config',
-    metavar='config',
-    type=str,
-    help='Path to the configuration file'
-)
+parser.add_argument("config", metavar="config", type=str, help="Path to the configuration file")
 
-parser.add_argument(
-    '-v',
-    '--verbose',
-    action='store_true',
-    help='Enable verbose logging'
-)
+parser.add_argument("-v", "--verbose", action="store_true", help="Enable verbose logging")
 
 args = parser.parse_args()
 
 logging.basicConfig(
-    format='%(asctime)s - %(levelname)s - %(message)s',
-    level=logging.DEBUG if args.verbose else logging.INFO
+    format="%(asctime)s - %(levelname)s - %(message)s", level=logging.DEBUG if args.verbose else logging.INFO
 )
 
 config = Config(args.config)

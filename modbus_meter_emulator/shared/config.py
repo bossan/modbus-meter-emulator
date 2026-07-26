@@ -19,18 +19,18 @@ class MqttConfigType(BaseModel):
 
 
 class ModbusConnectionType(str, Enum):
-    TCP = 'tcp'
-    SERIAL = 'serial'
+    TCP = "tcp"
+    SERIAL = "serial"
 
 
 class ModbusConfigType(BaseModel):
     connectionType: ModbusConnectionType = ModbusConnectionType.SERIAL
-    address: Optional[str] = 'localhost'
+    address: Optional[str] = "localhost"
     port: str  # /dev/tty... for serial or tcp port for tcp
     framer: Optional[FramerType] = FramerType.RTU
     stopbits: Optional[int] = 1
     bytesize: Optional[int] = 8
-    parity: Optional[str] = 'N'
+    parity: Optional[str] = "N"
     baudrate: Optional[int] = 9600
 
 
@@ -49,7 +49,7 @@ class Config:
     _config: ConfigType = None
 
     def __init__(self, config_path: str):
-        with open(config_path, 'r') as yaml_file:
+        with open(config_path, "r") as yaml_file:
             config = yaml.safe_load(yaml_file)
             self._config = ConfigType(**config)
 

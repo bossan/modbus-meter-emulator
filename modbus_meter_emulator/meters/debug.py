@@ -16,6 +16,7 @@ class CallbackDataBlock(ModbusSequentialDataBlock):
     """
     DataBlock with callback functions for getValues and set. Used for debugging purposes.
     """
+
     _name = ""
     _inc = 0
 
@@ -47,17 +48,14 @@ class DebugMeter(BaseMeter):
 
     def __init__(self, config: dict):
         self._set_config(config)
-        di_block = CallbackDataBlock('di', 0x00, [0] * 100)
-        co_block = CallbackDataBlock('co', 0x00, [0] * 100)
-        hr_block = CallbackDataBlock('hr', 0x00, [0] * 100)
-        ir_block = CallbackDataBlock('ir', 0x00, [0] * 100)
+        di_block = CallbackDataBlock("di", 0x00, [0] * 100)
+        co_block = CallbackDataBlock("co", 0x00, [0] * 100)
+        hr_block = CallbackDataBlock("hr", 0x00, [0] * 100)
+        ir_block = CallbackDataBlock("ir", 0x00, [0] * 100)
 
-        self._context = ModbusServerContext(slaves=ModbusSlaveContext(
-            di=di_block,
-            co=co_block,
-            hr=hr_block,
-            ir=ir_block
-        ), single=True)
+        self._context = ModbusServerContext(
+            slaves=ModbusSlaveContext(di=di_block, co=co_block, hr=hr_block, ir=ir_block), single=True
+        )
         self.set_initial_data()
 
     def set_data(self, topic: str, data: Any):

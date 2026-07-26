@@ -23,7 +23,7 @@ class ModbusServer:
                 StartTcpServer(
                     context=self._meter.context,
                     framer=self._modbus_config.framer,
-                    address=(self._modbus_config.address, int(self._modbus_config.port))
+                    address=(self._modbus_config.address, int(self._modbus_config.port)),
                 )
             elif self._modbus_config.connectionType == ModbusConnectionType.SERIAL:
                 StartSerialServer(
