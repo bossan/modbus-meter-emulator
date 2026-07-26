@@ -1,26 +1,34 @@
-[tool.poetry]
+[project]
 name = "modbus-meter-emulator"
 version = "0.1.0"
 description = "Emulates an energy meter with modbus communication"
-repository = "https://github.com/bossan/modbus-meter-emulator"
-
-authors = ["Sander Bos <mail@sanderbos.net>"]
 readme = "README.md"
-packages = [{ include = "modbus_meter_emulator" }]
+authors = [{ name = "Sander Bos", email = "mail@sanderbos.net" }]
+requires-python = ">=3.9,<4.0"
+dependencies = [
+    "paho-mqtt>=2.1.0,<3.0.0",
+    "pyyaml>=6.0.3,<7.0.0",
+    "pydantic>=2.12.5,<3.0.0",
+    "pymodbus[serial]>=3.8.6,<3.10.0",
+]
 
-[tool.poetry.dependencies]
-python = ">=3.9,<4.0"
-paho-mqtt = "^2.1.0"
-pyyaml = "^6.0.3"
-pydantic = "^2.12.5"
-pymodbus = {extras = ["serial"], version = "^3.8.6"}
+[project.urls]
+Repository = "https://github.com/bossan/modbus-meter-emulator"
 
-[tool.poetry.scripts]
+[project.scripts]
 meter = "modbus_meter_emulator.__main__:main"
 
-[tool.poetry.group.dev.dependencies]
-flake8 = "^7.3.0"
-
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.16.0",
+]

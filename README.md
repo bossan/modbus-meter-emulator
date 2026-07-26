@@ -9,11 +9,11 @@ The project is intended to be used with Home Assistant, but can be used with any
 
 ## Installation
 
-The current version uses [Poetry](https://python-poetry.org).
+The current version uses [uv](https://docs.astral.sh/uv/).
 Install the project and dependencies with:
 
 ```bash
-poetry install
+uv sync
 ```
 
 ## Configuration
@@ -49,7 +49,7 @@ meter:
 Run the project with:
 
 ```bash
-poetry run meter <path-to-config-yaml>
+uv run meter <path-to-config-yaml>
 ```
 Possitional arguments:
 - `config`: Path to the configuration file.
@@ -57,11 +57,6 @@ Possitional arguments:
 Options:
 - `-v` or `--verbose`: Enable verbose logging.
 - `-h` or `--help`: Show help message.
-
-> [!NOTE]
-> If you get a weird error like `'format'` when running the command above, this is most likely because of the version of Poetry you are using.
-> This project was developed with Poetry 1.8 and does not yet work with Poetry 2.0.
-> Try running the tool with `poetry run python -m modbus_meter_emulator <path-to-config-yaml>`.
 
 ### Docker
 This project is also available as a docker image.
